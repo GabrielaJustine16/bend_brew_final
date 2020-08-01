@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "bend_brew_final"
+#require "bend_brew_final"
+require_relative "../lib/environment"
+require "pry"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -9,6 +11,7 @@ require "bend_brew_final"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
+Pry.start
 
-require "irb"
-IRB.start(__FILE__)
+#require "irb"
+#IRB.start(__FILE__)
