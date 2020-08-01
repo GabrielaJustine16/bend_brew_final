@@ -5,8 +5,7 @@ class BendBrewFinal::CLI
     
     def start
         
-        puts "sup"
 
-        binding.pry
+       
     end 
 end
