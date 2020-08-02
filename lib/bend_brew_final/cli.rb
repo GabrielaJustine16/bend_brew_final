@@ -52,7 +52,7 @@ class CLI
         brewery.beers.each.with_index(1) do |beer, i|
                 
             
-            puts 
+            puts "#{i}. #{beer.name.ljust(50)} #{beer.style.ljust(40)} Ratings: #{beer.ratings} Score: #{beer.score}"
         
         
             end
