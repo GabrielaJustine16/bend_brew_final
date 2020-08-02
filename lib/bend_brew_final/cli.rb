@@ -25,8 +25,8 @@ class CLI
         Scraper.new.scrape_breweries
     end 
 
-    def self.list_breweries
-        puts "Listed are the wonderful breweries located in Bend, Oregon \n"
+    def list_breweries
+        puts "Listed are the wonderful breweries located in Bend, Oregon ! \n"
         #breweries = BendBrewFinal::Scraper
         #all.each_with_index(1) do |brewery, index|
             #puts "#{index}.#{brewery.name}-#{brewery.address}"  
@@ -38,10 +38,35 @@ class CLI
         menu 
     end 
 
+    def list_beers(brewery)
+
+        if brewery.beers.length==0
+            Scraper.new.scrape_beers(brewery)
+        
+            else 
+       
+        end
+
+        puts "Surprise! Here are the beers from #{brewery.name}:"
+            
+            brewery.beers.each.with_index(1) do |beer, i|
+                puts 
+            end
+            
+            exit_menu
+    end 
+
+    def exit_menu
+        
+        puts "Enter 'exit' to leave, or 'back' to view the brewery list."
+
+            unput=gets.strip
+
+    end
 
 
-    def self.menu
-        puts "Enter a number next to the brewery youd like more information on!"
+    def menu
+        puts "Enter the number next to the brewery youd like more information on!"
 
         input=gets.strip
         #index=input.to_i-1
@@ -50,13 +75,15 @@ class CLI
         #if index > 0 && index < @@all.size
         if input.to_i >= 1 && input.to_i <= Brewery.all.length
 
-            list_beers(Brewery.find_brewery_by_num(input.to_i))
+            list_beers(Brewery.find_brewery_by_number(input.to_i))
 
-        else puts "I dont understand . Have you had too many beers?  Please ty again . "
+        else 
+            puts "I dont understand . Have you had too many beers?  Please ty again . "
             
             menu 
 
         end 
     end
+
 
 end
