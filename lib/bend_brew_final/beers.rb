@@ -5,6 +5,9 @@ class Beer
         @@all=[]
 
     
+    def initialize (attributes)
+        attributes.each 
+    
 
 
 
