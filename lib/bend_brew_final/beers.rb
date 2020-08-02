@@ -1,5 +1,3 @@
-require "open-uri"
-require "nokogiri"
 
 class Beer
 

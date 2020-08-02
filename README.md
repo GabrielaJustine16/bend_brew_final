@@ -1,8 +1,6 @@
 # BendBrewFinal
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bend_brew_final`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Bend Brewery Gem! This gem is to help discover your new fvorite brewery or beer from one of Bend,Oregons popular breweries. With this Gem, usinf CLI, you will be able to see the breweries of Bend, then choose which location to view their beer list.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the bin/console file in your command line. You will then be given a list of the breweries of Bend, Oregon. You will be able to choose a number corresponding with your brewery of choice, to then see information about their beer collection!
 
 ## Development
 
