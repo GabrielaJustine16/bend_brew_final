@@ -38,30 +38,49 @@ class CLI
         menu 
     end 
 
-    def list_beers(brewery)
+    def  list_beers(brewery)
 
         if brewery.beers.length==0
             Scraper.new.scrape_beers(brewery)
         
-            else 
+        else 
        
         end
 
-        puts "Surprise! Here are the beers from #{brewery.name}:"
+            puts "Surprise! Here are the beers from #{brewery.name}:"
             
-            brewery.beers.each.with_index(1) do |beer, i|
-                puts 
+        brewery.beers.each.with_index(1) do |beer, i|
+                
+            
+            puts 
+        
+        
             end
             
             exit_menu
-    end 
+    
+    
+    
+        end 
 
     def exit_menu
         
         puts "Enter 'exit' to leave, or 'back' to view the brewery list."
 
-            unput=gets.strip
+                input=gets.strip.downcase
 
+                case input 
+            
+                when "back" 
+                list_breweries
+                when "exit"
+
+                puts "Sad to see you go. Come Back soon!"
+                else 
+                puts "Im sorry, I dont quite understand. Please try again."
+                exit_menu
+        end 
+    
     end
 
 
