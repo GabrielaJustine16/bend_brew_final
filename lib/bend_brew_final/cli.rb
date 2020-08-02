@@ -40,7 +40,7 @@ class CLI
 
     def  list_beers(brewery)
 
-        if brewery.beers.length==0
+        if brewery.beers.length == 0
             Scraper.new.scrape_beers(brewery)
         
         else 
@@ -52,8 +52,8 @@ class CLI
         brewery.beers.each.with_index(1) do |beer, i|
                 
             
-            puts "#{i}. #{beer.name.ljust(50)} #{beer.style.ljust(40)} Ratings: #{beer.ratings} Score: #{beer.score}"
-        
+            #puts "#{i}. #{beer.name.ljust(50)} #{beer.style.ljust(40)} Ratings: #{beer.ratings} Score: #{beer.score}"
+            puts "#{i}. #{beer.name.ljust(50)} #{beer.style.ljust(30)} Ratings: #{sprintf("%-10.10s", beer.ratings)} Score: #{sprintf("%-5.5s", beer.score)}"        
         
             end
             

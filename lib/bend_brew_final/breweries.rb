@@ -3,19 +3,25 @@ class Brewery
 
 attr_accessor :number , :name , :address , :url , :beers
 
-  @@all= []
+  @@all = []
 
-  def initialize (number = 1, name = "", address = "", url = "", beers = "")
+  def initialize (number = 1, name = "", address = "", url = "")
 
     @number = number 
+
     @name = name
+
     @address = address
+
     @url = url
+
     @beers = []
-    @@all<<self
+
+    @@all << self
   end
 
   def self.all 
+    
     @@all 
   end 
 
@@ -24,7 +30,9 @@ attr_accessor :number , :name , :address , :url , :beers
   end 
 
   def self.find_brewery_by_url(url)
-    Brewery.all.find {|brewey| brewery.url == url
+    
+    Brewery.all.find {|brewey| brewery.url == url}
+  
   end
 
 end 
