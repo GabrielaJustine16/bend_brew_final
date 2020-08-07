@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-#require "bend_brew_final"
 require_relative "../lib/environment"
 require "pry"
 
